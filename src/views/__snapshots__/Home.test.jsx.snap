@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Home page 1`] = `
+<div>
+  <div>
+    <div>
+      <h2>
+         
+        Please Sign the Guestbook
+         
+      </h2>
+      <form>
+        <label
+          for="guestname"
+        >
+          Guest Name:
+        </label>
+        <input
+          id="guestname"
+          name="guestname"
+          type="text"
+          value=""
+        />
+        <label
+          for="guestentry"
+        >
+          Guest Entry
+        </label>
+        <textarea
+          id="guestentry"
+          name="guestentry"
+          type="textarea"
+        />
+        <button
+          type="submit"
+        >
+          Sign
+        </button>
+        
+      </form>
+    </div>
+    <div>
+      <ul />
+    </div>
+  </div>
+</div>
+`;
