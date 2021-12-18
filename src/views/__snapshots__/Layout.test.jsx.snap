@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render layout 1`] = `
+<div>
+  <div>
+    <div>
+      <div
+        class="h2"
+      >
+        <h2>
+          Please Sign In
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+`;
