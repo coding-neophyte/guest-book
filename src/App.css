@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Oooh+Baby&family=Roboto:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Oooh+Baby&family=Roboto:wght@500&family=Shadows+Into+Light&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Oooh+Baby&family=Playfair+Display&family=Roboto:wght@500&family=Shadows+Into+Light&display=swap')
+;
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Oooh+Baby&family=PT+Sans+Narrow:wght@700&family=Playfair+Display&family=Roboto:wght@500&family=Shadows+Into+Light&display=swap');
+
+html{
+    background-color: aquamarine;
+}
+
+form{
+    margin-left: 40%;
+}
+
+label{
+    font-family: 'Oooh Baby', cursive;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+form input{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+form textarea{
+    margin-top: 10px;
+}
+
+h2{
+    font-family: 'Oooh Baby', cursive;
+    font-size: 50px;
+}
+
+li{
+    border-style: solid;
+    border-color: #1D6154;
+    border-radius: 10px;
+    list-style: none;
+    width: 20%;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+    float: left;
+
+
+}
+
+button{
+    height: 35px;
+    width: 10%;
+    font-size: 25px;
+    border-radius: 5px;
+    color: white;
+    background-color: #1D6154;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+button:hover{
+    background-color: #00AD8D;
+}

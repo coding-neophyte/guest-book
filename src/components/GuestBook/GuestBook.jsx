@@ -20,7 +20,7 @@ export default function GuestBook() {
     const inputGuestName = (
         <>
         <label htmlFor='guestname'>Guest Name:</label>
-        <input type='text' id='guestname' name='guestname' value={name} onChange={(e) => setName(e.target.value)} />
+        <input className='nameInput' type='text' id='guestname' name='guestname' value={name} onChange={(e) => setName(e.target.value)} />
         </>
     )
 
@@ -28,7 +28,7 @@ export default function GuestBook() {
 
     return (
         <div>
-            <h2> {welcomeMessage} </h2>
+            <h2 style={{ textAlign: 'center' }}> {welcomeMessage} </h2>
 
             <form onSubmit={handleSubmit}>
                 {user ? null : inputGuestName }
