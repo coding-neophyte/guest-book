@@ -1,16 +1,16 @@
 import { render } from '@testing-library/react'
 import Layout from './Layout'
 import { EntryProvider } from '../context/EntryContext'
-import { UserProvider } from '../context/UserContext'
+import { AuthProvider } from '../context/ProvideAuth'
 
 
 
 it('should render layout', () => {
     const {container} = render(
         <EntryProvider>
-        <UserProvider>
+        <AuthProvider>
             <Layout />
-        </UserProvider>
+        </AuthProvider>
         </EntryProvider>
     )
 

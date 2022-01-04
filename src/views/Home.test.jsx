@@ -1,15 +1,15 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { EntryProvider } from '../context/EntryContext'
-import { UserProvider } from '../context/UserContext'
+import { AuthProvider } from '../context/ProvideAuth'
 import Home from './Home'
 
-it.skip('should render Home page', () => {
+it('should render Home page', () => {
   const { container } = render(
     <EntryProvider>
-    <UserProvider>
+    <AuthProvider>
         <Home />
-     </UserProvider>
+     </AuthProvider>
     </EntryProvider>)
   expect(container).toMatchSnapshot()
 })

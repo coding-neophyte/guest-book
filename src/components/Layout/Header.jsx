@@ -1,8 +1,8 @@
 import React from 'react'
-import { UseUser } from '../../context/UserContext'
+import useAuth from '../../hooks/useAuth';
 
 export default function Header() {
-    const { user } = UseUser();
+    const { user } = useAuth();
     return (
         <div>
             <div className='h2'>

@@ -4,7 +4,9 @@ exports[`should render Home page 1`] = `
 <div>
   <div>
     <div>
-      <h2>
+      <h2
+        style="text-align: center;"
+      >
          
         Please Sign the Guestbook
          
@@ -16,6 +18,7 @@ exports[`should render Home page 1`] = `
           Guest Name:
         </label>
         <input
+          class="nameInput"
           id="guestname"
           name="guestname"
           type="text"
@@ -36,7 +39,6 @@ exports[`should render Home page 1`] = `
         >
           Sign
         </button>
-        
       </form>
     </div>
     <div>
