@@ -1,19 +1,22 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEntry } from '../../context/EntryContext'
-import { UseUser } from '../../context/UserContext'
+import useAuth from '../../hooks/useAuth'
+import { useHistory } from 'react-router-dom'
 
 export default function GuestBook() {
     const [name, setName] = useState('')
     const [guestEntry, setGuestEntry] = useState('')
     const {entry, setEntry} = useEntry()
-    const {user, setUser} = UseUser()
+    const {user, setUser} = useAuth()
+    const history = useHistory();
+    let auth = useAuth();
 
     const handleSubmit = (e) =>{
         e.preventDefault()
         if(!guestEntry) return
-        setUser(name)
-        setEntry([...entry, {name: name, message: guestEntry}])
+        // setUser(user)
+        setEntry([...entry, {name: user, message: guestEntry}])
         setGuestEntry('')
     }
 
@@ -23,6 +26,14 @@ export default function GuestBook() {
         <input className='nameInput' type='text' id='guestname' name='guestname' value={name} onChange={(e) => setName(e.target.value)} />
         </>
     )
+
+     const handleLogout = () => {
+        const signout = auth.logout()
+
+        if(signout){
+            history.replace('/login')
+        }
+     }
 
     const welcomeMessage = user ? `Welcome ${user}`: 'Please Sign the Guestbook'
 
@@ -36,7 +47,7 @@ export default function GuestBook() {
                 <textarea type='textarea' id='guestentry' name='guestentry' value={guestEntry} onChange={(e) => setGuestEntry(e.target.value)} />
                 <button type='submit'>Sign</button>
                 {user && (
-                    <button type='button' onClick={() => {setName(''); setUser('')}}>
+                    <button type='button' onClick={() => handleLogout()}>
                         Not {user} ?
                     </button>
                 )}
